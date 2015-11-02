@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head><title>Demo: Object scope ("this") & prototype</title></head>
+<style></style>
+
+<body>
+  <h1>Demo: Object scope ("this") & prototype</h1>
+  <p id="pLog"></p>
+</body>
+
+<script>
+  var PL = document.getElementById("pLog");
+  function mylog(z)     { PL.innerHTML += (z + "<br>"); }
+  function mylogNoBr(z) { PL.innerHTML += z; }
+  function clearLog()   { PL.innerHTML = ""; }
+
+  var name  = "Prius";
+  var speed = "50";
+
+  function makeCar(name, speed) {
+    this.name  = name;
+    this.speed = speed;
+    this.printSpeed = function() {
+      mylog("In method: Speed = " + this.speed);
+    }
+  }
+
+  function printSpeed() { mylog("Named: Speed is " + this.speed); }
+  function printName()  { mylog("Named: Name  is " + this.name ); }
+
+  var futureCar = new makeCar("Flux Capacitor Delorian", 5000);
+  futureCar.printName = printName;
+
+  printSpeed();
+  futureCar.printSpeed();
+
+  mylogNoBr("Global call: "); printName();
+  mylogNoBr("Method call: "); futureCar.printName();
+
+  //////////////////
+  // From article //
+  //////////////////
+  var EpicFailVideo = function(epicRating, hasAnimals) {
+    this.epicRating = epicRating;
+    this.hasAnimals = hasAnimals;
+
+    };
+  var parkourFail = new EpicFailVideo(7, false);
+  var corgiFail   = new EpicFailVideo(4, true);
+//parkourFail.genrateRandom(1, 5); // Fails here
+
+  EpicFailVideo.prototype.generateRandom = function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  parkourFail.generateRandom();
+  console.log(parkourFail.generateRandom(1, 5)); // But doesn't fail here
+  console.log(corgiFail.generateRandom(1, 5));
+  delete EpicFailVideo.prototype.generateRandom;
+//parkourFail.generateRandom(1, 5); // And fails again here
+
+</script>
+</html>
