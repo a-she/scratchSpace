@@ -1,0 +1,79 @@
+<html>
+
+<style>
+.imgNorm { vertical-align: top; }
+#imgSq   { vertical-align: top; }
+#imgAlign { margin: auto; }
+#imgOverlay { position:fixed; left:50%; top:0; opacity:0.2; }
+</style>
+
+<body>
+<p>Normal:
+<img class="imgNorm" src="HalloweenPumpkins_600x399.jpg" alt="Halloween pumpkins"
+     title="Tooltip text -- Hi, class! Default size/AR"></img></p>
+
+<p>Forced to be square:
+<img id="imgSq" src="HalloweenPumpkins_600x399.jpg" alt=""
+     title="Forced to be square"
+     height=399 width=399></img></p>
+
+<p>Normal:
+<img class="imgNorm" src="clipHalloween200x196.gif" alt="Pumpkin clipart"
+     title="Normal clipart"></img></p>
+
+<p>Width scaled to browser viewport's width:
+<p><img id="imgZoom" src="clipHalloween200x196.gif" alt="Pumpkin clipart"
+     title="Scaled to viewport width"
+     width=100%></img></p>
+
+<p>Left/right alignment:</p>
+<p><img id="imgAlign" src="clipHalloween200x196.gif" alt="Pumpkin clipart" title="Demo of text flowing around an image"></img>
+
+<p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.<br>
+
+Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.<br>
+
+Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.<br>
+
+Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu.</p>
+
+<button onclick="nextImg()">Next image</button>
+<button onclick="askImage()">Prompt for image number</button>
+
+<p>Image to change:<p id="pChange">Image #0: <img width=300 src="clipHalloween200x196.gif" alt="Pumpkin clipart" title="Changeable image"></img></p>
+
+
+<p><img id="imgOverlay" src="clipHalloween200x196.gif" alt="Pumpkin clipart"></img><img id="imgOverlay" src="halloweenOwls600x550.png"></img>
+</body>
+
+<script>
+var pChange = document.getElementById("pChange");
+var imgFiles = [ "clipHalloween200x196.gif", "halloweenOwls600x550.png"];
+
+var imgNum = 0;
+var ans = "0";
+var ansNum = 0;
+
+function changeImg(n) {
+  pChange.innerHTML='Image #' + n + ': <img src="' + imgFiles[n] + '" width=300 alt="Halloween owls" title="Owls!!"></img>';
+}
+
+function nextImg() {
+  imgNum++;
+  if (imgNum >= imgFiles.length) {
+    imgNum = 0;
+  }
+  changeImg(imgNum);
+}
+
+function askImage() {
+  ans = prompt("Which image would you like to see?");
+  ansNum = Number(ans);
+  if ( (ansNum >= 0) && (ansNum < imgFiles.length)) {
+    imgNum = ansNum;
+    changeImg(imgNum);
+  }
+}
+</script>
+
+</html>
