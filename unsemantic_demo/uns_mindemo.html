@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Unsemantic CSS Framework</title>
+<!--[if lt IE 9]>
+  <script src="./js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="./css/demo.css" />
+<link rel="stylesheet" href="./css/unsemantic-grid-base.css" />
+<noscript>
+  <link rel="stylesheet" href="./css/unsemantic-grid-mobile.css" />
+</noscript>
+<script>
+  var ADAPT_CONFIG = {
+    path: './css/',
+    dynamic: true,
+    range: [
+      '0 to 767px = unsemantic-grid-mobile.css',
+      '767px = unsemantic-grid-desktop.css'
+    ]
+  };
+</script>
+<script src="./js/adapt.min.js"></script>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-100 mobile-grid-100">
+      <h1 class="grid-100">
+        <a href="http://unsemantic.com/">Unsemantic</a>
+        <br />
+        Adapt.js Demo
+      </h1>
+      <hr />
+    </div>
+    <div class="grid-100 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          100%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+
+    <div class="grid-70 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          70%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-30 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          30%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+
+    <div class="grid-33 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          33%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-33 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          33%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-33 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          33%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+
+    <hr />
+    <div class="grid-100 align-center">
+      <h3>
+        Prefix &amp; Suffix
+      </h3>
+    </div>
+    <div class="grid-10 suffix-90 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-10 prefix-10 suffix-80 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-10 prefix-20 suffix-70 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-10 prefix-30 suffix-60 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-10 prefix-40 suffix-50 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-10 prefix-50 suffix-40 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-10 prefix-60 suffix-30 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-10 prefix-70 suffix-20 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-10 prefix-80 suffix-10 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <div class="grid-10 prefix-90 mobile-grid-50">
+      <section class="example-block">
+        <b class="hide-on-mobile">
+          10%
+        </b>
+        <b class="hide-on-desktop">
+          50%
+        </b>
+        <span class="dynamic-px-width"></span>
+      </section>
+    </div>
+    <hr />
+
+    <div class="grid-100 align-center">
+      <h3>
+        Nested Columns
+      </h3>
+    </div>
+
+    <!-- Start of outer (parent) column -->
+    <div class="grid-50 grid-parent mybox">
+      <p class="grid-100 align-center">
+        <b>
+          Parent Column (50%)
+        </b>
+      </p>
+
+      <!-- Child column (left) -->
+      <div class="grid-50 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            50%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+
+      <!-- Child column (right) -->
+      <div class="grid-50 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            50%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+
+    </div> <!-- End of outer (parent) column -->
+
+
+    <div class="grid-50 grid-parent mybox">
+      <p class="grid-100 align-center">
+        <b>
+          Parent Column (50&pct;)
+        </b>
+      </p>
+      <div class="grid-50 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            50%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+      <div class="grid-50 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            50%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+    </div>
+
+    <div class="grid-66 grid-parent mybox">
+      <p class="grid-100 align-center">
+        <b>
+          Parent Column
+        </b>
+      </p>
+      <div class="grid-25 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            25%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+      <div class="grid-25 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            25%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+      <div class="grid-25 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            25%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+      <div class="grid-25 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            25%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+    </div>
+
+    <div class="grid-33 grid-parent mybox">
+      <p class="grid-100 align-center">
+        <b>
+          Parent Column
+        </b>
+      </p>
+      <div class="grid-25 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            25%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+      <div class="grid-25 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            25%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+      <div class="grid-25 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            25%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+      <div class="grid-25 mobile-grid-50">
+        <section class="example-block">
+          <b class="hide-on-mobile">
+            25%
+          </b>
+          <b class="hide-on-desktop">
+            50%
+          </b>
+          <span class="dynamic-px-width"></span>
+        </section>
+      </div>
+    </div>
+  </div>
+<!--  <script src="./js/jquery.js"></script>
+  <script src="./js/demo.js"></script> -->
+</body>
+</html>
