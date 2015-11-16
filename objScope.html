@@ -15,24 +15,30 @@
   function clearLog()   { PL.innerHTML = ""; }
 
   var name  = "Prius";
-  var speed = "50";
+  var speed = 9;
 
   function makeCar(name, speed) {
     this.name  = name;
     this.speed = speed;
-    this.printSpeed = function() {
+    this.getSpeed = function() {
       mylog("In method: Speed = " + this.speed);
     }
+    mylog(this.speed);
   }
 
-  function printSpeed() { mylog("Named: Speed is " + this.speed); }
+  function printSpeed() {
+    var newCar = makeCar("Fiat", 111);
+
+    mylog("Named: Speed is " + this.speed);
+  }
+
   function printName()  { mylog("Named: Name  is " + this.name ); }
 
   var futureCar = new makeCar("Flux Capacitor Delorian", 5000);
   futureCar.printName = printName;
 
   printSpeed();
-  futureCar.printSpeed();
+  futureCar.getSpeed();
 
   mylogNoBr("Global call: "); printName();
   mylogNoBr("Method call: "); futureCar.printName();
@@ -43,17 +49,16 @@
   var EpicFailVideo = function(epicRating, hasAnimals) {
     this.epicRating = epicRating;
     this.hasAnimals = hasAnimals;
-
-    };
+  };
   var parkourFail = new EpicFailVideo(7, false);
   var corgiFail   = new EpicFailVideo(4, true);
-//parkourFail.genrateRandom(1, 5); // Fails here
+  //parkourFail.genrateRandom(1, 5); // Fails here
 
   EpicFailVideo.prototype.generateRandom = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  parkourFail.generateRandom();
+  parkourFail.generateRandom(1, 5);
   console.log(parkourFail.generateRandom(1, 5)); // But doesn't fail here
   console.log(corgiFail.generateRandom(1, 5));
   delete EpicFailVideo.prototype.generateRandom;
