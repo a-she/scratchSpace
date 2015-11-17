@@ -1,4 +1,4 @@
 Hi there!
 temp changes (spelling corrected in "al_tmp" branch)
 
-Line added in the master branch. This is a boring line.
+4th line from merge choice: A totally new line!!
